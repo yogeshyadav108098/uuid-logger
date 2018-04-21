@@ -20,6 +20,10 @@ var Logger = new (require('uuid-logger'))();
 let App = Express();
 App.use(Logger.addRequestId());
 
+
+// In logger.js
+const Logger = new (require('uuid-logger'))();
+
 Logger.addTransport({
     console: {
         name: 'Console Logger',
@@ -61,4 +65,5 @@ Logger.addTransport({
     }
 });
 
+module.exports = Logger.getLogger()
 ```
