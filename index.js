@@ -21,8 +21,8 @@ class Main {
         this.transports = 0;
     }
 
-    addRequestId() {
-        return ThreadStorage.addRequestId;
+    addRequestId(req, res, next) {
+        return ThreadStorage.addRequestId(req, res, next);
     }
 
     getLogger() {
