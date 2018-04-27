@@ -50,7 +50,7 @@ class Main {
             Winston.add(Winston.transports.Console, {
                 name: options.console.name || 'Console Logger - ' + Uuid.v4(),
                 level: options.console.level || 'info',
-                colorize: options.console.colorize || true,
+                colorize: _.get(options, 'console.colorize') ? true : false,
                 timestamp: options.console.timeFormat || timeFormat
             });
             this.transports += 1;
@@ -66,18 +66,16 @@ class Main {
                 );
             }
 
-            // Override default options with passed in options
-            let fileOptions = _.merge({
-                name: 'File Logger - ' + Uuid.v4(),
+            Winston.add(Winston.transports.DailyRotateFile, {
+                name: options.file.name || 'File Logger - ' + Uuid.v4(),
                 filename: Path.join(filePath, fileName),
-                level: 'info',
-                colorize: false,
-                timestamp: timeFormat,
-                json: false,
-                zippedArchive: true,
-                maxDays: 15
-            }, options.file);
-            Winston.add(Winston.transports.DailyRotateFile, fileOptions);
+                level: options.file.level || 'info',
+                colorize: options.file.colorize || false,
+                timestamp: options.file.timeFormat || timeFormat,
+                json: options.file.json || false,
+                zippedArchive: _.get(options, 'file.zippedArchive') ? true : false,
+                maxDays: options.file.maxDays || 15
+            });
             this.transports += 1;
         }
 
