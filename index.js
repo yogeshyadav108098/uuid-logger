@@ -66,16 +66,18 @@ class Main {
                 );
             }
 
-            Winston.add(Winston.transports.DailyRotateFile, {
-                name: options.file.name || 'File Logger - ' + Uuid.v4(),
+            // Override default options with passed in options
+            let fileOptions = _.merge({
+                name: 'File Logger - ' + Uuid.v4(),
                 filename: Path.join(filePath, fileName),
-                level: options.file.level || 'info',
-                colorize: options.file.colorize || false,
-                timestamp: options.file.timeFormat || timeFormat,
-                json: options.file.json || false,
-                zippedArchive: options.file.zippedArchive || true,
-                maxDays: options.file.maxDays || 15
-            });
+                level: 'info',
+                colorize: false,
+                timestamp: timeFormat,
+                json: false,
+                zippedArchive: true,
+                maxDays: 15
+            }, options.file);
+            Winston.add(Winston.transports.DailyRotateFile, fileOptions);
             this.transports += 1;
         }
 
