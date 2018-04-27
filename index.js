@@ -14,7 +14,12 @@ let logger;
 let timeFormat = () => (new Datetime.create()).format('Y-m-d H:m:S.MS');
 
 // Remove default console writer
-Winston.remove(Winston.transports.Console);
+try {
+    Winston.remove(Winston.transports.Console);
+} catch (error) {
+
+}
+
 
 class Main {
     constructor() {
