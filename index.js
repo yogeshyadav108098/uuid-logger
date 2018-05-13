@@ -45,6 +45,10 @@ class Main {
         return logger;
     }
 
+    configure(options) {
+        Winston.configure(options);
+    }
+
     addTransport(options) {
         if (options.console) {
             Winston.add(Winston.transports.Console, {
