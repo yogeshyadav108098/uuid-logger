@@ -3,15 +3,15 @@
 const _ = require('lodash');
 const Uuid = require('uuid');
 const Path = require('path');
+const Moment = require('moment');
 const Winston = require('winston');
 require('winston-daily-rotate-file');
-const Datetime = require('node-datetime');
 const SlackHook = require('winston-slack-advanced');
 
 const ThreadStorage = new (require('./lib/threadStorage'))();
 
 let logger;
-let timeFormat = () => (new Datetime.create()).format('Y-m-d H:m:S.MS');
+let timeFormat = () => Moment().format('YYYY-MM-DD hh:mm:ss.MS');
 
 // Remove default console writer
 try {
