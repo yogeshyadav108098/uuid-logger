@@ -11,7 +11,7 @@ const SlackHook = require('winston-slack-advanced');
 const ThreadStorage = new (require('./lib/threadStorage'))();
 
 let logger;
-let timeFormat = () => Moment().format('YYYY-MM-DD hh:mm:ss.MS');
+let timeFormat = () => Moment().format('YYYY-MM-DD HH:mm:ss.MS');
 
 // Remove default console writer
 try {
