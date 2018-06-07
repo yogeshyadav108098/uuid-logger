@@ -55,7 +55,8 @@ class Main {
                 name: options.console.name || 'Console Logger - ' + Uuid.v4(),
                 level: options.console.level || 'info',
                 colorize: _.get(options, 'console.colorize') ? true : false,
-                timestamp: options.console.timeFormat || timeFormat
+                timestamp: options.console.timeFormat || timeFormat,
+                formatter: options.console.formatter
             });
             this.transports += 1;
         }
@@ -78,7 +79,8 @@ class Main {
                 timestamp: options.file.timeFormat || timeFormat,
                 json: options.file.json || false,
                 zippedArchive: _.get(options, 'file.zippedArchive') ? true : false,
-                maxDays: options.file.maxDays || 15
+                maxDays: options.file.maxDays || 15,
+                formatter: options.file.formatter
             });
             this.transports += 1;
         }
