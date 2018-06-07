@@ -1,6 +1,6 @@
 {
     "name": "uuid-logger",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "Unique Id based logger for node requests",
     "main": "index.js",
     "scripts": {
