@@ -1,50 +1,50 @@
 {
-  "name": "uuid-logger",
-  "version": "1.1.4",
-  "description": "Unique Id based logger for node requests",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yogeshyadav108098/uuid-logger.git"
-  },
-  "keywords": [
-    "UniqueID",
-    "UUID",
-    "Logger",
-    "logger",
-    "uuid",
-    "unique id"
-  ],
-  "author": "Yogesh Yadav",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yogeshyadav108098/uuid-logger/issues"
-  },
-  "homepage": "https://github.com/yogeshyadav108098/uuid-logger#readme",
-  "dependencies": {
-    "bluebird": "^3.5.1",
-    "cls-bluebird": "^2.1.0",
-    "cls-middleware": "^1.1.0",
-    "cls-mongoose": "^2.0.1",
-    "cls-mysql": "^1.0.3",
-    "cls-q": "^1.1.0",
-    "cls-redis": "^1.0.3",
-    "continuation-local-storage": "^3.2.1",
-    "eslint": "^4.19.1",
-    "eslint-config-google": "^0.9.1",
-    "json-stringify-safe": "^5.0.1",
-    "lodash": "^4.17.5",
-    "moment": "^2.22.2",
-    "mongoose": "^5.0.15",
-    "mysql": "^2.15.0",
-    "q": "^1.5.1",
-    "redis": "^2.8.0",
-    "uuid": "^3.2.1",
-    "winston": "^2.4.2",
-    "winston-daily-rotate-file": "^3.1.2",
-    "winston-slack-advanced": "^1.0.1"
-  }
+    "name": "uuid-logger",
+    "version": "1.1.5",
+    "description": "Unique Id based logger for node requests",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yogeshyadav108098/uuid-logger.git"
+    },
+    "keywords": [
+        "UniqueID",
+        "UUID",
+        "Logger",
+        "logger",
+        "uuid",
+        "unique id"
+    ],
+    "author": "Yogesh Yadav",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/yogeshyadav108098/uuid-logger/issues"
+    },
+    "homepage": "https://github.com/yogeshyadav108098/uuid-logger#readme",
+    "dependencies": {
+        "bluebird": "^3.5.1",
+        "cls-bluebird": "^2.1.0",
+        "cls-middleware": "^1.1.0",
+        "cls-mongoose": "^2.0.1",
+        "cls-mysql": "^1.0.3",
+        "cls-q": "^1.1.0",
+        "cls-redis": "^1.0.3",
+        "continuation-local-storage": "^3.2.1",
+        "eslint": "^4.19.1",
+        "eslint-config-google": "^0.9.1",
+        "json-stringify-safe": "^5.0.1",
+        "lodash": "^4.17.5",
+        "moment": "^2.22.2",
+        "mongoose": "^5.0.15",
+        "mysql": "^2.15.0",
+        "q": "^1.5.1",
+        "redis": "^2.8.0",
+        "uuid": "^3.2.1",
+        "winston": "^2.4.2",
+        "winston-daily-rotate-file": "^3.1.2",
+        "winston-slack-advanced": "^1.0.1"
+    }
 }
