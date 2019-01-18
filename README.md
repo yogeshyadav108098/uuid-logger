@@ -12,7 +12,6 @@ In normal scenario, tracking and processing request is little typical. This libr
 2. Differentiate and tracks different requests.
 
 ## Getting started.
-Redis-Q Job manager will work on all systems which can run node. 
 Request tracking example after using this logger
 ![RequestTracking](assets/requestTrack.png?raw=true "Track Requests")
 
