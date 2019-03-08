@@ -80,7 +80,8 @@ class Main {
                 json: options.file.json || false,
                 zippedArchive: _.get(options, 'file.zippedArchive') ? true : false,
                 maxDays: options.file.maxDays || 15,
-                formatter: options.file.formatter
+                formatter: options.file.formatter,
+                maxSize: options.file.maxSize || '500m'
             });
             this.transports += 1;
         }
@@ -110,3 +111,4 @@ class Main {
 }
 
 module.exports = Main;
+
